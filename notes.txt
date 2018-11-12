@@ -34,3 +34,15 @@ query {
     }
   }
 }
+
+query {
+  author(firstName: "Edmond", lastName: "Jones") {
+    firstName
+    lastName
+    posts {
+      title
+      views
+    }
+  }
+  getFortuneCookie
+}
