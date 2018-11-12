@@ -6,7 +6,31 @@ Installation
 - homebrew installed
 - mongodb - brew install mongodb
 
-
+---------------------------------------------------
 Resolvers
 - version 1 - https://gist.github.com/helfer/c5750955cb0c37f3f79dd2ab2d4dcc6e
 - version 2 (sqlite) - https://gist.github.com/helfer/4a6572c8663a4135301b6192d4043075
+
+---------------------------------------------------
+Queries
+
+query {
+  author(firstName: "Jayde", lastName: "Conn") {
+    firstName
+    lastName
+    posts {
+      title
+    }
+  }
+}
+
+query {
+  author(firstName: "Edmond", lastName: "Jones") {
+    firstName
+    lastName
+    posts {
+      title
+      views
+    }
+  }
+}
